@@ -1,0 +1,102 @@
+CS5803 Data Visualisation - How to Run Instructions
+Student Name: Mohammad Ahmad Author
+Student ID: STUDENT_ID
+Module: CS5803 Data Visualisation
+
+This appendix contains the files required to open and inspect the Tableau dashboard, the R Shiny second implementation, and the clustering extension.
+
+Recommended submission files:
+1. Main PDF report submitted separately on Wiseflow:
+   STUDENT_ID_CS5803_Report.pdf
+
+2. Appendix zip submitted separately on Wiseflow:
+   STUDENT_ID_CS5803_Appendix.zip
+
+The appendix zip should contain:
+- STUDENT_ID_CS5803_Report.docx
+- STUDENT_ID_CS5803_Tableau_Dashboard.twbx
+- Final_DV_Dataset.csv
+- app.r
+- data_modelling_clustering.r
+- LSOA_Cluster_Output.csv
+- LSOA_Cluster_Summary.csv
+- STUDENT_ID_CS5803_How_to_Run.txt
+
+
+1. Opening the main Tableau implementation
+
+The main Tableau implementation should be opened using the packaged Tableau workbook:
+
+STUDENT_ID_CS5803_Tableau_Dashboard.twbx
+
+Steps:
+1. Extract the appendix zip file to a local folder.
+2. Open Tableau Desktop or Tableau Reader.
+3. Open STUDENT_ID_CS5803_Tableau_Dashboard.twbx.
+4. The packaged workbook should contain the dashboard, worksheets, Story sheet and required data connection.
+5. Open the main dashboard to inspect the full one-screen interactive visualisation.
+6. Open the Tableau Story sheet to follow the walkthrough for SQ1, SQ2, SQ3 and CQ1.
+
+Important:
+The Tableau workbook should be saved as a packaged workbook (.twbx), not only as a .twb file. A packaged workbook reduces the risk of missing data connections when opened on another computer.
+
+
+2. Dataset used for Tableau and Shiny
+
+The cleaned dataset used for the project is:
+
+FINAL_DV_Dataset.csv
+
+This file contains the cleaned and denormalised crime dataset used for the Tableau dashboard and the R Shiny second implementation.
+
+If Tableau asks for a missing data file, reconnect it to FINAL_DV_Dataset.csv. However, this should not be necessary if the packaged .twbx file has been created correctly.
+
+
+3. Running the R Shiny second implementation
+
+Required files:
+- app.R
+- FINAL_DV_Dataset.csv
+
+Steps:
+1. Extract the appendix zip file to a local folder.
+2. Make sure app.R and FINAL_DV_Dataset.csv are in the same folder.
+3. Open RStudio.
+4. Set the working directory to the folder containing app.R and FINAL_DV_Dataset.csv.
+5. Install the shiny package if it is not already installed:
+   install.packages("shiny")
+6. Run the app using:
+   source("app.R")
+
+The app.R script is designed to launch the Shiny application automatically in the browser.
+
+Alternative method:
+1. Open app.R in RStudio.
+2. Click "Run App" if RStudio displays that option.
+
+
+4. Running the clustering extension
+
+Required files:
+- data_modelling_clustering.R
+- FINAL_DV_Dataset.csv
+
+Steps:
+1. Make sure data_modelling_clustering.R and FINAL_DV_Dataset.csv are in the same folder.
+2. Open RStudio.
+3. Set the working directory to that folder.
+4. Run:
+   source("data_modelling_clustering.R")
+
+Expected output:
+The script reads FINAL_DV_Dataset.csv, aggregates the data at LSOA level, performs k-means clustering, and creates clustering output files.
+
+Included clustering output files:
+- LSOA_Cluster_Output.csv
+- LSOA_Cluster_Summary.csv
+
+These files are included so the marker can inspect the clustering result without needing to rerun the script.
+
+
+
+
